@@ -298,6 +298,10 @@ h3 {
   text-align: left;
   color: rgba(0, 0, 0, 0.5);
 }
+
+.textarea::placeholder {
+  padding-left: 10px;
+}
 .contact_right {
   padding-top: 80px;
   margin-left: 34px;
@@ -309,7 +313,7 @@ h3 {
   font-size: 30px;
   text-align: center;
   height: 187px;
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
 }
 
 .network_items ul {
