@@ -7,11 +7,7 @@ body {
 }
 .main_container {
   margin: auto;
-  width: 1920px;
-}
-.page {
-  width: 1920px;
-  height: 951px;
+  max-width: 1920px;
 }
 
 header {
@@ -64,6 +60,7 @@ h3 {
   margin: 0 auto;
   overflow: hidden;
 }
+
 .gallery {
   display: flex;
   justify-content: center;
@@ -235,7 +232,7 @@ h3 {
 .name {
   position: relative;
   z-index: 0;
-  top: -220px;
+  bottom: 220px;
   left: 0;
   width: 392px;
   height: 154px;
@@ -329,80 +326,119 @@ li {
   margin: 0;
 }
 
-/* adaptivity
-      @media screen and (min-width: 1620px) {
-        .main_container {
-          width: 1420px;
-        }
-      }
+/* adaptivity */
 
-      @media screen and (max-width: 992px) {
-        .main_container,
-        .page,
-        .container,
-        header {
-          width: 972px;
-          height: auto;
-        }
-        .container {
-          overflow: visible;
-        }
-        .nav a {
-          font-size: 26px;
-        }
-        .logo > img {
-          width: 90%;
-        }
-        .AnimationLeftSlow {
-          animation: AnimationLeftDown 1s linear 1;
-          position: relative;
-        }
+@media (min-width: 1620px) {
+  .main_container,
+  .page,
+  .header {
+    width: 1420px;
+  }
 
-        .AnimationRightSlow {
-          animation: AnimationRightDown 1s linear 1;
-          position: relative;
-        }
-        @keyframes AnimationLeftDown {
-          0% {
-            transform: translate(0px 0px);
-          }
-          100% {
-            transform: translate(500px 500px);
-          }
-        }
-        @keyframes AnimationRightDown {
-          0% {
-            transform: translate(0px 0px);
-          }
-          100% {
-            transform: translate(-500px 500px);
-          }
-        }
-        .services {
-          flex-direction: column-reverse;
-        }
+  .container {
+    height: 1500px;
+  }
 
-        .service_text {
-          font-size: 38px;
-        }
+  .AnimationLeftSlow {
+    animation: AnimationLeftDown 1.5s linear 1;
+    position: relative;
+    top: 710px;
+    left: 500px;
+  }
 
-        .cards {
-          flex-wrap: wrap;
-        }
-        
-        .contact_us {
-          flex-direction: column;
-        }
-        .contact_right {
-          margin: auto;
-          margin-bottom: 18px;
-        }
-        .footer {
-          font-size: 26px;
-          height: auto;
-        }
-        h3 {
-          font-size: 30px;
-        }
-      }
-      */
+  .AnimationRightSlow {
+    animation: AnimationRightDown 1.5s linear 1;
+    position: relative;
+    top: 710px;
+    left: -500px;
+  }
+  @keyframes AnimationLeftDown {
+    0% {
+      transform: translateX(-700px);
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes AnimationRightDown {
+    0% {
+      transform: translateX(700px);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
+}
+
+/*
+@media screen and (max-width: 992px) {
+  .main_container,
+  .page,
+  .container,
+  header {
+    width: 972px;
+    height: auto;
+  }
+  .container {
+    overflow: visible;
+  }
+  .nav a {
+    font-size: 26px;
+  }
+  .logo > img {
+    width: 90%;
+  }
+  .AnimationLeftSlow {
+    animation: AnimationLeftDown 1s linear 1;
+    position: relative;
+  }
+
+  .AnimationRightSlow {
+    animation: AnimationRightDown 1s linear 1;
+    position: relative;
+  }
+  @keyframes AnimationLeftDown {
+    0% {
+      transform: translate(0px 0px);
+    }
+    100% {
+      transform: translate(500px 500px);
+    }
+  }
+  @keyframes AnimationRightDown {
+    0% {
+      transform: translate(0px 0px);
+    }
+    100% {
+      transform: translate(-500px 500px);
+    }
+  }
+  .services {
+    flex-direction: column-reverse;
+  }
+
+  .service_text {
+    font-size: 38px;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .contact_us {
+    flex-direction: column;
+  }
+  .contact_right {
+    margin: auto;
+    margin-bottom: 18px;
+  }
+  .footer {
+    font-size: 26px;
+    height: auto;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
+*/
