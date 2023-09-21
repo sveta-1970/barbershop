@@ -204,13 +204,13 @@ p {
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(-135%, 0);
+    transform: translate(-124%, 0);
   }
   50% {
-    transform: translate(-135%, -135%);
+    transform: translate(-124%, -128%);
   }
   75% {
-    transform: translate(0, -135%);
+    transform: translate(0, -128%);
   }
 }
 
@@ -224,13 +224,13 @@ p {
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(0, -135%);
+    transform: translate(0, -128%);
   }
   50% {
-    transform: translate(135%, -135%);
+    transform: translate(128%, -128%);
   }
   75% {
-    transform: translate(135%, 0);
+    transform: translate(128%, 0);
   }
 }
 
