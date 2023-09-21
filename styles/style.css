@@ -132,16 +132,20 @@ p {
 }
 .services {
   display: flex;
+  width: 100%;
 }
 .service_images {
   display: flex;
+  width: 50%;
   justify-content: space-around;
   align-items: center;
-  flex: 1;
+  flex-wrap: wrap;
 }
 
 .service_images img {
-  width: var(--image-width);
+  width: 350px;
+  animation: move 40s linear infinite;
+  position: relative;
 }
 
 .service_text {
@@ -151,83 +155,82 @@ p {
 }
 
 .hayir_styling {
-  animation: CycleAnimationRight 40s linear 0s infinite;
+  animation: moveHS 50s linear infinite;
 }
 
-@keyframes CycleAnimationRight {
-  0% {
-    top: 0;
-    left: 0;
+@keyframes moveHS {
+  0%,
+  100% {
+    transform: translate(0, 0);
   }
-
   25% {
-    transform: translateX(480px);
+    transform: translate(135%, 0);
   }
   50% {
-    transform: translate(480px, 450px);
+    transform: translate(135%, 135%);
   }
   75% {
-    transform: translateY(450px);
+    transform: translate(0, 135%);
   }
 }
 
 .beard_triming {
-  animation: CycleAnimationDown 40s linear 0s infinite;
+  animation: moveBT 50s linear infinite;
 }
-@keyframes CycleAnimationDown {
-  0% {
-    top: 0;
-    left: 480px;
-  }
 
+@keyframes moveBT {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
   25% {
-    transform: translateY(450px);
+    transform: translate(0, 135%);
   }
   50% {
-    transform: translate(-480px, 450px);
+    transform: translate(-135%, 135%);
   }
   75% {
-    transform: translateX(-480px);
+    transform: translate(-135%, 0);
   }
 }
 
 .hair_straightening {
-  animation: CycleAnimationLeft 40s linear 0s infinite;
+  animation: moveHST 50s linear infinite;
 }
-@keyframes CycleAnimationLeft {
-  0% {
-    top: 450px;
-    left: 480px;
-  }
 
+@keyframes moveHST {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
   25% {
-    transform: translateX(-480px);
+    transform: translate(-135%, 0);
   }
   50% {
-    transform: translate(-480px, -450px);
+    transform: translate(-135%, -135%);
   }
   75% {
-    transform: translateY(-450px);
+    transform: translate(0, -135%);
   }
 }
 
 .smooth_shave {
-  animation: CycleAnimationUp 40s linear 0s infinite;
+  animation: moveSS 50s linear infinite;
 }
-@keyframes CycleAnimationUp {
-  0% {
-    top: 450px;
-    left: 0px;
-  }
 
+@keyframes moveSS {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
   25% {
-    transform: translateY(-450px);
+    transform: translate(0, -135%);
   }
   50% {
-    transform: translate(480px, -450px);
+    transform: translate(135%, -135%);
   }
   75% {
-    transform: translateX(480px);
+    transform: translate(135%, 0);
   }
 }
 
@@ -237,7 +240,6 @@ p {
 }
 
 .barber img {
-  padding-left: 16px;
   width: var(--image-width);
 }
 .cards {
