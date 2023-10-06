@@ -81,9 +81,11 @@ p {
   flex-direction: column;
   gap: 16px;
 }
+/*
 .AnimationLeft img {
   width: var(--image-width);
 }
+*/
 
 .AnimationRight {
   animation: AnimationRight 1s linear 1;
@@ -92,28 +94,31 @@ p {
   flex-direction: column;
   gap: 16px;
 }
+/*
 .AnimationRight img {
   width: var(--image-width);
 }
+*/
 
 .AnimationLeftSlow {
   animation: AnimationLeft 2s linear 1;
   position: relative;
 }
-
+/*
 .AnimationLeftSlow img {
   width: var(--image-width);
 }
+*/
 
 .AnimationRightSlow {
   animation: AnimationRight 2s linear 1;
   position: relative;
 }
-
+/*
 .AnimationRightSlow img {
   width: var(--image-width);
 }
-
+*/
 @keyframes AnimationLeft {
   0% {
     transform: translateX(-500px);
@@ -238,10 +243,11 @@ p {
   width: 50%;
   flex: 1;
 }
-
+/*
 .barber img {
   width: var(--image-width);
 }
+*/
 .cards {
   display: flex;
   justify-content: space-around;
@@ -371,7 +377,7 @@ li {
     width: 80%;
   }
 }
-
+/*
 @media (max-width: 992px) {
   .container {
     height: auto;
@@ -426,7 +432,7 @@ li {
   }
 }
 
-/*
+
 @media screen and (max-width: 992px) {
   
 
