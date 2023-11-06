@@ -62,6 +62,10 @@ p {
   padding: 0 20px;
 }
 
+.page {
+  overflow: hidden;
+}
+
 .gallery {
   margin: 30px auto;
   overflow: hidden;
@@ -149,8 +153,6 @@ p {
 
 .service_images img {
   width: 350px;
-  animation: move 40s linear infinite;
-  position: relative;
 }
 
 .service_text {
@@ -160,82 +162,103 @@ p {
 }
 
 .hayir_styling {
-  animation: moveHS 50s linear infinite;
+  animation: animationPage2Left 40s linear infinite;
+  position: relative;
 }
 
-@keyframes moveHS {
-  0%,
-  100% {
-    transform: translate(0, 0);
+@keyframes animationPage2Left {
+  from,
+  to {
+    top: 0;
+    left: 0;
   }
   25% {
-    transform: translate(135%, 0);
+    top: 0;
+    left: 480px;
   }
   50% {
-    transform: translate(135%, 135%);
+    left: 480px;
+    top: 450px;
   }
   75% {
-    transform: translate(0, 135%);
+    top: 450px;
+    left: 0px;
   }
 }
 
 .beard_triming {
-  animation: moveBT 50s linear infinite;
+  animation: animationPage2Down 40s linear infinite;
+  position: relative;
 }
 
-@keyframes moveBT {
-  0%,
-  100% {
-    transform: translate(0, 0);
+@keyframes animationPage2Down {
+  from,
+  to {
+    left: 0;
+    top: 0;
   }
+
   25% {
-    transform: translate(0, 135%);
+    top: 450px;
+    left: 0;
   }
   50% {
-    transform: translate(-135%, 135%);
+    left: -480px;
+    top: 450px;
   }
   75% {
-    transform: translate(-135%, 0);
+    top: -0;
+    left: -480px;
   }
 }
 
 .hair_straightening {
-  animation: moveHST 50s linear infinite;
+  animation: animationPage2Right 40s linear infinite;
+  position: relative;
 }
 
-@keyframes moveHST {
-  0%,
-  100% {
-    transform: translate(0, 0);
+@keyframes animationPage2Right {
+  from,
+  to {
+    top: 0;
+    left: 0;
   }
   25% {
-    transform: translate(-124%, 0);
+    top: 0;
+    left: -480px;
   }
   50% {
-    transform: translate(-124%, -128%);
+    left: -480px;
+    top: -450px;
   }
   75% {
-    transform: translate(0, -128%);
+    top: -450px;
+    left: 0px;
   }
 }
 
 .smooth_shave {
-  animation: moveSS 50s linear infinite;
+  animation: animationPage2Up 40s linear infinite;
+  position: relative;
 }
 
-@keyframes moveSS {
-  0%,
-  100% {
-    transform: translate(0, 0);
+@keyframes animationPage2Up {
+  from,
+  to {
+    top: 0;
+    left: 0;
   }
   25% {
-    transform: translate(0, -128%);
+    top: -450px;
+    left: 0;
   }
   50% {
-    transform: translate(128%, -128%);
+    left: 480px;
+    top: -450px;
   }
   75% {
-    transform: translate(128%, 0);
+    top: 0;
+    left: 480px;
   }
 }
 
